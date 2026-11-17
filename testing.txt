@@ -4,6 +4,10 @@ CMD 1:
 node server.js
 
 CMD 2:
+Download Tools:
+winget install k6 --source winget
+
+Testing:
 k6 run -e VUS=1 -e DURATION=60s --summary-export=evidence/tc01.json performance-test.js
 k6 run -e VUS=10 -e DURATION=60s --summary-export=evidence/tc02.json performance-test.js
 k6 run -e VUS=25 -e DURATION=60s --summary-export=evidence/tc03.json performance-test.js
