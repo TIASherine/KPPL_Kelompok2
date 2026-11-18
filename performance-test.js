@@ -12,6 +12,7 @@ export const options = {
       duration: DURATION,
     },
   },
+
   thresholds: {
     http_req_duration: ["p(95)<1000"],
     http_req_failed: ["rate<0.05"],
@@ -20,11 +21,15 @@ export const options = {
 };
 
 export default function () {
-  const response = http.get("http://localhost:3000/products/search?q=Produk");
+  const response = http.get(
+    "http://localhost:3000/products/search?q=Produk",
+    { timeout: "5s" }
+  );
 
   check(response, {
     "HTTP status 200": (r) => r.status === 200,
-    "Response under 1s": (r) => r.timings.duration < 1000,
+    "Response under 1s": (r) =>
+      r.status === 200 && r.timings.duration < 1000,
   });
 
   sleep(1);
