@@ -1,6 +1,6 @@
 Indikator,Hasil
-Tingkat beban diuji,1 hingga 200 VU
-p95 tertinggi,6.12 ms
-Error rate tertinggi,0.00%
-Throughput tertinggi,199.23 req/s
+Tingkat beban diuji,1 hingga 350 VU
+p95 tertinggi,7.72 ms
+Error rate tertinggi,0.40%
+Throughput tertinggi,348.33 req/s
 Status semua threshold,Lulus
