@@ -13,6 +13,8 @@ k6 run -e VUS=10 -e DURATION=60s --summary-export=evidence/tc02.json performance
 k6 run -e VUS=25 -e DURATION=60s --summary-export=evidence/tc03.json performance-test.js
 k6 run -e VUS=50 -e DURATION=60s --summary-export=evidence/tc04.json performance-test.js
 k6 run -e VUS=200 -e DURATION=60s --summary-export=evidence/tc05.json performance-test.js
+k6 run -e VUS=250 -e DURATION=60s --summary-export=evidence/tc06.json performance-test.js
+k6 run -e VUS=300 -e DURATION=60s --summary-export=evidence/tc07.json performance-test.js
 
 Visualisasi:
 python -m pip install pandas matplotlib ipykernel
